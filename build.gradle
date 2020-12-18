@@ -6,6 +6,33 @@
  * User Manual available at https://docs.gradle.org/5.4/userguide/java_library_plugin.html
  */
 
+import com.github.spotbugs.snom.SpotBugsTask
+import org.springframework.boot.gradle.plugin.SpringBootPlugin
+
+// ./gradlew clean && ./gradlew uploadArchives -Prelease
+
+buildscript {
+    ext {
+        kotlin_version = '1.4.21'
+        spring_boot_version = '2.3.5.RELEASE'
+    }
+
+    repositories {
+        mavenCentral()
+        maven { url 'https://plugins.gradle.org/m2/' }
+        maven { url 'https://repo.spring.io/plugins-release' }
+    }
+    dependencies {
+        classpath 'com.github.ben-manes:gradle-versions-plugin:0.36.0'
+        classpath 'com.puppycrawl.tools:checkstyle:8.38'
+        classpath 'gradle.plugin.com.github.spotbugs.snom:spotbugs-gradle-plugin:4.6.0'
+        classpath 'io.franzbecker:gradle-lombok:4.0.0'
+        classpath 'io.spring.gradle:dependency-management-plugin:1.0.10.RELEASE'
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:$spring_boot_version"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
 plugins {
     // Apply the java-library plugin to add support for Java Library
     id 'java-library'
