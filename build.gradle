@@ -38,6 +38,8 @@ plugins {
     id 'java-library'
 }
 
+apply plugin: 'org.springframework.boot'
+
 task stage {
   dependsOn build
 }
@@ -66,7 +68,7 @@ dependencies {
     implementation 'com.linecorp.bot:line-bot-model:4.3.0'
     implementation 'com.linecorp.bot:line-bot-api-client:4.3.0'
 
-    compile('com.linecorp.bot:line-bot-spring-boot:1.3.0') // ココを追加
+    compile('com.linecorp.bot:line-bot-spring-boot:1.3.0')
     compile('org.springframework.boot:spring-boot-starter-actuator')
     compile('org.springframework.boot:spring-boot-starter-web')
     testCompile('org.springframework.boot:spring-boot-starter-test')
