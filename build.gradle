@@ -34,9 +34,9 @@ dependencies {
     implementation 'com.linecorp.bot:line-bot-servlet:4.3.0'
     implementation 'com.linecorp.bot:line-bot-model:4.3.0'
     implementation 'com.linecorp.bot:line-bot-api-client:4.3.0'
-    implementation 'org.springframework.boot:spring-boot-starter'
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation 'org.springframework.boot:spring-boot-starter:2.4.1'
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.4.1'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.4.1'
 }
 
 // for heroku
