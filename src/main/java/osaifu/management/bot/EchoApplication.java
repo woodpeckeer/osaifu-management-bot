@@ -3,6 +3,8 @@
  */
 package osaifu.management.bot;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.linecorp.bot.model.event.Event;
@@ -16,6 +18,8 @@ import com.linecorp.bot.spring.boot.annotation.LineMessageHandler;
 @SpringBootApplication
 @LineMessageHandler
 public class EchoApplication {
+    private final Logger log = LoggerFactory.getLogger(EchoApplication.class);
+
     public static void main(String[] args) {
         SpringApplication.run(EchoApplication.class, args);
     }
