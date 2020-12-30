@@ -2,3 +2,6 @@ line.bot:
   channel-token: 'sOQCJevGgy++B7BElc5jDIQ+mFAiPEjXriLe0dncjg+w5YB7X8KI5dFzoO9KHA2VITyOduwVH5MGc0VcZbqTGydTfUdJtRy7bDxJt4aBg7Z9C+Im7Bkkz9WgHjUUZlXoBDBPxIWDQStAKGRlm9nqpwdB04t89/1O/w1cDnyilFU='
   channel-secret: '8a0dab4e7de290e7f99454e12860d7c7'
   handler.path: /callback
+
+logging.level:
+  org.springframework: WARN
